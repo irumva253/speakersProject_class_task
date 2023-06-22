@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Folk</title>
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+<body>
+    <h1>Speakers</h1>
+    <table style="width:100%">
+        <tr>
+          <th>Names</th>
+          <th>Role</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+        <tr>
+            {% for person_key, person_value in data.items %}
+          <td>{{person_value.names}}</td>
+          <td>{{person_value.Role}}</td>
+          <td>{{person_value.phone}}</td>
+          <td>{{person_value.email}}</td>
+        </tr>
+        {%endfor%}
+      </table>   
+</body>
+</html>

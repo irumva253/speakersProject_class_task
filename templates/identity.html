@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identifications</title>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+          <th>Names</th>
+          <th>Role</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+        <tr>
+            {%if person %}
+          <td>{{person_value.names}}</td>
+          <td>{{person_value.Role}}</td>
+          <td>{{person_value.phone}}</td>
+          <td>{{person_value.email}}</td>
+        </tr>
+      </table>
+      {%else%}
+    <p>Speaker unallocated</p>
+    {% endif %}
+</body>
+</html>

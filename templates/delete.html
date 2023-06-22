@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete speaker</title>
+</head>
+<body>
+    <h1>Speakers</h1>
+    <hr>
+     <a href="/speakers/">View All</a> | <a href="/speakers/create/">Form</a> | <a href="">Delete</a>
+     <form action="#">  
+        {%if person%}
+        <table>  
+        <tr>  
+            <td class="tdLabel"><label for="register_name" class="label">Names:</label></td>  
+            <td><input type="text" name="name" value="{{person.names}}" id="register_name" style="width:160px"/></td>  
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_phone" class="label">Phone:</label></td>  
+            <td><input type="tel" name="phone" value="{{person.phone}}" id="register_phone" style="width:160px"/></td>  
+        </tr>  
+        <tr>  
+            <td class="tdLabel"><label for="register_email" class="label">Email:</label></td>  
+            <td></td>
+        </td><input type="email" name="email" value="{{person.email}}" id="register_email" style="width:160px"/></td>  
+        </tr>  
+       
+        <tr>  
+            <td class="tdLabel"><label for="register_country" class="label">Select Country:</label></td>  
+            <td><select name="country" id="register_country" style="width:160px">  
+            <option value="{{person.Country}}">Rwandan</option>  
+            <option value="{{ person.Country }}">Burundian</option>  
+            
+        </select>  
+        </td>  
+        </tr>  
+        <tr>  
+            <script>window.confirm("Are You Sure You want to Delete speaker {{person.names}}");</script>
+            <button type="button">Send</button>
+            {%else%}
+            <p>Speaker you want to remove is not listed</p>
+          {% endif %}
+        </div></td>  
+        </tr>  
+        </table>  
+        </form>  
+</body>
+</html>
